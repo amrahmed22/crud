@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud operations</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-12 m-auto w-100">
+                <label for="ProductName" class="fs-4 my-2">Product Name :</label>
+                <input type="text" oninput="productNameValidation()" class="form-control w-100 py-2 w-100 py-2" id="ProductName">
+                <label for="ProductPrice" class="fs-4 my-2">Product Price :</label>
+                <input type="number" oninput="productPriceValidation()" class="form-control w-100 py-2" id="ProductPrice">
+                <label for="ProductCategory" class="fs-4 my-2">Product Category :</label>
+                <input type="text" class="form-control w-100 py-2" oninput="productCategoryValidation()" id="ProductCategory">
+                <label for="ProductDescription" class="fs-4 my-2">Product Description :</label>
+                <input type="text" class="form-control w-100 py-2"oninput="productDescValidation() "  id="ProductDescription">
+                <button class="btn btn-primary my-3 d-inline-block" id="add" onclick="addProduct()"> Add Product </button>
+                <button class="btn btn-primary my-3" onclick="clearData()"> Reset </button>
+                <button class="btn btn-primary my-3 d-none" id="update" onclick="updatedProducts()"> Update Product
+                </button>
+                <input type="text" placeholder="Search For  a Product" class="form-control py-2 my-2 border rounded-3" oninput="search(this.value)">
+
+            </div>
+        </div>
+        <table class="table text-center text-white shadow-lg my-3">
+            <thead>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>category</th>
+                <th>description</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="crud.js"></script>
+</body>
+
+</html>
